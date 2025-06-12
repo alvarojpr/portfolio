@@ -117,3 +117,26 @@ button:hover {
         height: auto;
     }
 }
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #4b5563;
+    background-color: #1f2937;
+    color: #f9fafb;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.formulario-contato label {
+    font-weight: bold;
+    color: #e5e7eb;
+}
+
