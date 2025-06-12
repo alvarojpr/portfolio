@@ -4,7 +4,9 @@ from .forms import MensagemForm
 
 def sobre_mim(request):
     tecnologias = ['Python', 'R', 'Google Sheets', 'SQL', 'Excel', 'Tableau', 'Power BI']
-    return render(request, 'core/sobre_mim.html', {'tecnologias': tecnologias})
+    links = {"LinkedIn":"https://www.linkedin.com/in/%C3%A1lvaro-jos%C3%A9-pereira-rodrigues/",
+            "GitHub":"https://github.com/alvarojpr"}
+    return render(request, 'core/sobre_mim.html', {'tecnologias': tecnologias, 'links':links})
 
 def projetos(request):
     projetos = Projeto.objects.all()
