@@ -16,4 +16,11 @@
         <li>{{ tech }}</li>
     {% endfor %}
 </ul>
+<h2>Links:</h2>
+<ul>
+    {% for nome, url in links.items %}
+        <li><a href="{{ url }}" target="_blank">{{ nome }}</a></li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
