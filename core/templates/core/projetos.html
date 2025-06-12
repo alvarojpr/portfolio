@@ -1,10 +1,15 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<h1>Projetos</h1>
-<ul>
+<section class="container">
+  <h1>Projetos</h1>
+  <ul class="lista-projetos">
     {% for projeto in projetos %}
-        <li><a href="{{ projeto.link }}" target="_blank">{{ projeto.nome }}</a> - {{ projeto.descricao }}</li>
+      <li>
+        <strong><a href="{{ projeto.link }}" target="_blank">{{ projeto.nome }}</a></strong><br>
+        <p>{{ projeto.descricao }}</p>
+      </li>
     {% endfor %}
-</ul>
+  </ul>
+</section>
 {% endblock %}
