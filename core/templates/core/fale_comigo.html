@@ -1,17 +1,22 @@
 {% extends 'core/base.html' %}
-
 {% block content %}
-<section class="container">
-  <h1>Fale comigo</h1>
+<h1>Fale comigo</h1>
 
-  {% if sucesso %}
-    <p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>
-  {% endif %}
+{% if sucesso %}
+  <p class="mensagem-sucesso">Mensagem enviada com sucesso!</p>
+{% endif %}
 
-  <form method="post" class="formulario-contato">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn">Enviar</button>
-  </form>
-</section>
+<form method="post" class="formulario-contato">
+  {% csrf_token %}
+  <label for="id_nome">Nome:</label>
+  <input type="text" name="nome" id="id_nome" required>
+
+  <label for="id_email">Email:</label>
+  <input type="email" name="email" id="id_email" required>
+
+  <label for="id_mensagem">Mensagem:</label>
+  <textarea name="mensagem" id="id_mensagem" rows="5" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
 {% endblock %}
