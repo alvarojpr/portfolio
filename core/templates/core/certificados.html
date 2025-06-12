@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Certificados</h1>
+<ul>
+    {% for cert in certificados %}
+        <li>
+            <a href="{{ cert.link }}" target="_blank">{{ cert.nome }}</a> - {{ cert.credencial }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="/">Sobre mim</a>
+        <a href="/projetos/">Projetos</a>
+        <a href="/certificados/">Certificados</a>
+        <a href="/fale-comigo/">Fale comigo</a>
+    </nav>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

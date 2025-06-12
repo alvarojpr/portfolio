@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>Projetos</h1>
+<ul>
+    {% for projeto in projetos %}
+        <li><a href="{{ projeto.link }}" target="_blank">{{ projeto.nome }}</a> - {{ projeto.descricao }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
