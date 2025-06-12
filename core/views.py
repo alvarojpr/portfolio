@@ -3,7 +3,7 @@ from .models import Projeto, Certificado
 from .forms import MensagemForm
 
 def sobre_mim(request):
-    tecnologias = ['Python', 'R', 'Google Sheets', 'Excel', 'Tableau', 'Power BI']
+    tecnologias = ['Python', 'R', 'Google Sheets', 'SQL', 'Excel', 'Tableau', 'Power BI']
     return render(request, 'core/sobre_mim.html', {'tecnologias': tecnologias})
 
 def projetos(request):
