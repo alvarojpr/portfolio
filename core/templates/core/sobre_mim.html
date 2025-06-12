@@ -2,25 +2,36 @@
 {% load static %}
 
 {% block content %}
-<h1>Sobre mim</h1>
+<div class="container mt-5">
+  <h1 class="mb-4 text-center">Sobre mim</h1>
 
-<img src="{% static 'core/img/sua_foto.png' %}" alt="Foto de perfil" style="width: 150px; border-radius: 50%; margin-bottom: 1rem;">
+  <div class="text-center">
+    <img src="{% static 'core/img/sua_foto.png' %}" alt="Foto de perfil"
+         class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+  </div>
 
-<p>Sou analista de dados com experiência prática em coleta, transformação, tratamento, análise e visualização de dados.</p>
+  <p class="text-justify">
+    Sou analista de dados com experiência prática em coleta, transformação, tratamento, análise e visualização de dados.
+  </p>
 
-<p>Tenho vivência no desenvolvimento de aplicações web com coleta automatizada de dados via web scraping, uso de bancos de dados SQL e construção de pipelines de dados. Também concluí o curso <strong>Google Data Analytics Certificate</strong>, onde desenvolvi habilidades para fornecer insights baseados em dados e apoiar a tomada de decisões estratégicas.</p>
+  <p class="text-justify">
+    Tenho vivência no desenvolvimento de aplicações web com coleta automatizada de dados via web scraping, uso de bancos de dados SQL e construção de pipelines de dados. Também concluí o curso <strong>Google Data Analytics Certificate</strong>, onde desenvolvi habilidades para fornecer insights baseados em dados e apoiar a tomada de decisões estratégicas.
+  </p>
 
-<h2>Tecnologias que possuo experiência:</h2>
-<ul>
+  <h2 class="mt-4">Tecnologias que possuo experiência:</h2>
+  <ul class="list-group mb-4">
     {% for tech in tecnologias %}
-        <li>{{ tech }}</li>
+      <li class="list-group-item">{{ tech }}</li>
     {% endfor %}
-</ul>
-<h2>Links:</h2>
-<ul>
-    {% for nome, url in links.items %}
-        <li><a href="{{ url }}" target="_blank">{{ nome }}</a></li>
-    {% endfor %}
-</ul>
+  </ul>
 
+  <h2>Links:</h2>
+  <ul class="list-inline">
+    {% for nome, url in links.items %}
+      <li class="list-inline-item">
+        <a class="btn btn-outline-primary btn-sm" href="{{ url }}" target="_blank">{{ nome }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock %}
