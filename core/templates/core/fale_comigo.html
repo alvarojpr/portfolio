@@ -8,15 +8,22 @@
 
 <form method="post" class="formulario-contato">
   {% csrf_token %}
-  <label for="id_nome">Nome:</label>
-  <input type="text" name="nome" id="id_nome" required>
+  <div class="campo">
+    <label for="id_nome">Nome:</label>
+    <input type="text" name="nome" id="id_nome" required>
+  </div>
 
-  <label for="id_email">Email:</label>
-  <input type="email" name="email" id="id_email" required>
+  <div class="campo">
+    <label for="id_email">Email:</label>
+    <input type="email" name="email" id="id_email" required>
+  </div>
 
-  <label for="id_mensagem">Mensagem:</label>
-  <textarea name="mensagem" id="id_mensagem" rows="5" required></textarea>
+  <div class="campo">
+    <label for="id_mensagem">Mensagem:</label>
+    <textarea name="mensagem" id="id_mensagem" rows="5" required></textarea>
+  </div>
 
   <button type="submit">Enviar</button>
 </form>
+
 {% endblock %}
